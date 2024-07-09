@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "rootDir": "src",
+      "outDir": "dist",
+      "strict": true,
+      "esModuleInterop": true,
+      "sourceMap": true,
+    },
+    "include": ["src"]
+  }
+
+  //To compile the TypeScript code, we need to run the following command in the terminal:
+  // npx tsc or npm build
+
+  //Explanation of tsconfig.json
+  // target: specifies the version of ECMAScript that the code should be transpiled to.
+  // module: specifies the module system to use.
+  // rootDir: specifies the root directory of input files.
+  // outDir: specifies the root directory of output files.
+  // strict: enables all strict type checking options.
+  // esModuleInterop: enables compatibility with Babel, a JavaScript compiler.
+  // include: specifies an array of glob patterns that refer to the source files that we want to be included in the compilation.
+
+
+  //More about tsconfig.json
+  // https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
