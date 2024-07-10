@@ -3,11 +3,12 @@ import RoomInfo from './RoomInfo';
 import Image from 'next/image';
 
 export default function Home() {
+  const date = new Date().toDateString();
   return (
     <main className={styles.main}>
       <nav className={styles.nav}>
         <h1 className={styles.navItem}>QuickCall</h1>
-        <h1 className={styles.navItem}  >{new Date().toDateString()}</h1>
+        <h1 className={styles.navItem}  >{date}</h1>
       </nav>
       <div className={styles.container}>
         <div>
