@@ -272,17 +272,18 @@ export default function Call({ params }: { params: { id: string } }) {
     tracks.forEach((track: MediaStreamTrack) => {
       if (track.kind === 'video') {
         if (isVideoOff) {
-          navigator.mediaDevices.getUserMedia({ video: true, audio: (isMuted) ? false : true })
-            .then((localStream: MediaStream) => {
-              localVideoRef.current.srcObject = localStream;
-              setisVideoOff(false);
-            })
-            .catch((err: any) => {
-              alert('Failed to get local stream' + err);
-            });
+          track.enabled = true;
+          // navigator.mediaDevices.getUserMedia({ video: true, audio: (isMuted) ? false : true })
+          //   .then((localStream: MediaStream) => {
+          //     localVideoRef.current.srcObject = localStream;
+          //     setisVideoOff(false);
+          //   })
+          //   .catch((err: any) => {
+          //     alert('Failed to get local stream' + err);
+          //   });
         }
         else {
-          track.stop();
+          track.enabled = false;
           setisVideoOff(true);
         }
       }
